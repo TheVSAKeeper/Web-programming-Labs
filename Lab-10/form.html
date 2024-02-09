@@ -10,114 +10,168 @@
     <title>Анкета пользователя</title>
   </head>
   <body>
+    <h3 align="center">Анкета пользователя</h3>
+    <p>Ответьте, пожалуйста, на вопросы:</p>
     <form>
       <table>
         <tr>
-          <td>Пожалуйста, введите ваши данные:</td>
-        </tr>
-        <tr>
           <td>Ваша фамилия:</td>
-          <td><input name="lastName" size="35" type="text" /></td>
+          <td>
+            <label>
+              <input name="lastName" size="35" type="text" />
+            </label>
+          </td>
         </tr>
         <tr>
           <td>Ваше имя:</td>
-          <td><input name="firstName" size="35" type="text" /></td>
+          <td>
+            <label>
+              <input name="firstName" size="35" type="text" />
+            </label>
+          </td>
         </tr>
         <tr>
           <td>Ваше отчество:</td>
-          <td><input name="middleName" size="35" type="text" /></td>
-        </tr>
-        <tr>
-          <td>Ваш пол:</td>
           <td>
-            <input name="gender" type="radio" value="male" />Мужской
-            <input name="gender" type="radio" value="female" />Женский
+            <label>
+              <input name="middleName" size="35" type="text" />
+            </label>
+          </td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <label>
+        Ваш пол:
+        <br />
+        <i>
+          <input name="gender" type="radio" value="male" />
+          Мужской
+          <br />
+          <input name="gender" type="radio" value="female" />
+          Женский
+        </i>
+      </label>
+
+      <br />
+      <hr />
+
+      <label>
+        Семейное положение:
+        <br />
+        <i>
+          <input name="maritalStatus" type="radio" value="single" />Холост/Не
+          замужем
+          <br />
+          <input
+            name="maritalStatus"
+            type="radio"
+            value="married"
+          />Женат/Замужем
+        </i>
+      </label>
+
+      <br />
+      <br />
+
+      <label>
+        Количество детей
+        <input name="children" type="number" />
+      </label>
+
+      <hr />
+
+      <table>
+        <tr>
+          <td>Страна:</td>
+          <td>
+            <label>
+              <select name="country">
+                <option value="Russia">Россия</option>
+                <option value="Ukraine">Украина</option>
+                <option value="Belarus">Беларусь</option>
+                <option value="Kazakhstan">Казахстан</option>
+              </select>
+            </label>
           </td>
         </tr>
         <tr>
-          <td>Ваш семейный статус:</td>
+          <td>Другая:</td>
           <td>
-            <input name="maritalStatus" type="radio" value="single" />Холост/Не
-            замужем
-            <input
-              name="maritalStatus"
-              type="radio"
-              value="married"
-            />Женат/Замужем
-          </td>
-        </tr>
-        <tr>
-          <td><input name="children" type="number" /></td>
-        </tr>
-        <tr>
-          <td>Страна проживания:</td>
-          <td>
-            <select name="country">
-              <option value="Russia">Россия</option>
-              <option value="Ukraine">Украина</option>
-              <option value="Belarus">Беларусь</option>
-              <option value="Kazakhstan">Казахстан</option>
-            </select>
+            <label>
+              <input name="other" size="25" type="text" />
+            </label>
           </td>
         </tr>
         <tr>
           <td>Индекс:</td>
-          <td><input name="zip" size="6" type="text" /></td>
+          <td>
+            <label>
+              <input
+                maxlength="6"
+                name="zip"
+                size="6"
+                type="text"
+                value="999999"
+              />
+            </label>
+          </td>
         </tr>
         <tr>
           <td>Город:</td>
-          <td><input name="city" size="35" type="text" /></td>
+          <td>
+            <label>
+              <input name="city" size="20" type="text" />
+            </label>
+          </td>
         </tr>
         <tr>
           <td>Улица:</td>
-          <td><input name="street" size="35" type="text" /></td>
-        </tr>
-        <tr>
-          <td>Номер дома:</td>
-          <td><input name="house" size="6" type="text" /></td>
-        </tr>
-        <tr>
-          <td>Номер квартиры:</td>
-          <td><input name="apartment" size="6" type="text" /></td>
-        </tr>
-        <tr>
-          <td><input name="email" type="email" /></td>
-        </tr>
-        <tr>
-          <td></td>
           <td>
-            <input type="submit" value="Отправить анкету" />
-            <input type="reset" value="Очистить" />
+            <label>
+              <input name="street" size="35" type="text" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Дом:</td>
+          <td>
+            <label>
+              <input name="house" size="6" type="text" />
+            </label>
+            <label>
+              Квартира:
+              <input name="apartment" size="6" type="text" />
+            </label>
           </td>
         </tr>
       </table>
-      <textarea
-        cols="64"
-        name="feedback"
-        placeholder="Спасибо за заполнение анкеты! Мы ценим ваше время и стремимся улучшить качество нашего сервиса. Пожалуйста, оставьте свой отзыв о процессе заполнения анкеты."
-        rows="6"
-      ></textarea>
+
+      <hr />
+
+      <label>
+        Электронный адрес:
+        <input name="email" size="40" type="email" />
+      </label>
+
+      <br />
+      <hr />
+
+      <label>
+        <textarea
+          cols="64"
+          name="feedback"
+          placeholder="Спасибо за заполнение анкеты! Мы ценим ваше время и стремимся улучшить качество нашего сервиса. Пожалуйста, оставьте свой отзыв о процессе заполнения анкеты."
+          rows="6"
+        ></textarea>
+      </label>
+
+      <br />
+      <hr />
+
+      <input type="submit" value="Подача запроса" />
+      <input type="reset" value="Сброс" />
     </form>
   </body>
 </html>
-<!--
-
-Формы используются для сбора и отправки данных от пользователя на веб-сервер. С помощью форм можно создавать интерактивные веб-приложения, такие как регистрация, авторизация, опросы, заказы, обратная связь и т.д.
-Форму задают с помощью тега <form>, который содержит различные элементы управления, такие как текстовые поля, кнопки, переключатели, флажки, списки и т.д. Тег <form> имеет атрибуты, которые определяют, как и куда будут отправляться данные формы, например, action, method, enctype и т.д.
-На форме могут находиться разные элементы, которые служат для ввода, выбора или отправки данных. Например:
-Тег <input> создает поле для ввода текста, числа, пароля, даты, файла, цвета и т.д. В зависимости от атрибута type, поле может иметь разный вид и поведение.
-Тег <button> создает кнопку, которая может выполнять разные действия, например, отправлять, сбрасывать или отменять форму. Атрибут type определяет функцию кнопки, а атрибут value определяет текст на кнопке.
-Тег <label> создает метку для элемента формы, которая улучшает доступность и удобство использования. Атрибут for связывает метку с элементом по идентификатору.
-Тег <select> создает выпадающий список, из которого можно выбрать один или несколько вариантов. Внутри тега <select> находятся теги <option>, которые задают значения и текст вариантов.
-Тег <textarea> создает многострочное текстовое поле, в которое можно ввести большой объем текста. Атрибуты rows и cols определяют размер поля, а атрибут placeholder определяет текст по умолчанию.
-Тег <fieldset> создает группу связанных элементов формы, которая может иметь заголовок, заданный тегом <legend>. Это помогает структурировать и оформить форму.
-Параметр тега <input>, который определяет тип поля ввода, называется type. Он может принимать разные значения, которые влияют на вид, поведение и валидацию поля. Например:
-type="text" создает однострочное текстовое поле, в которое можно ввести любой текст.
-type="password" создает однострочное текстовое поле, в котором символы заменяются на точки или звездочки для скрытия пароля.
-type="number" создает поле для ввода числа, которое имеет стрелки для увеличения или уменьшения значения. Можно задать минимальное, максимальное и шаговое значение с помощью атрибутов min, max и step.
-type="email" создает поле для ввода электронной почты, которое проверяет, что введенный текст соответствует формату адреса электронной почты.
-type="file" создает поле для выбора файла с компьютера пользователя, которое имеет кнопку “Обзор” и текстовое поле с именем выбранного файла. Можно задать типы файлов, которые можно выбрать, с помощью атрибута accept.
-type="radio" создает переключатель, который позволяет выбрать один вариант из нескольких. Переключатели, которые относятся к одной группе, должны иметь одинаковое значение атрибута name. Атрибут value определяет, какое значение будет отправлено на сервер, если переключатель выбран. Атрибут checked определяет, какой переключатель будет заранее выбран.
-type="checkbox" создает флажок, который позволяет выбрать или снять выбор с одного или нескольких вариантов. Флажки, которые относятся к одной группе, могут иметь разные значения атрибута name. Атрибут value определяет, какое значение будет отправлено на сервер, если флажок выбран. Атрибут checked определяет, какой флажок будет заранее выбран.
-
--->
