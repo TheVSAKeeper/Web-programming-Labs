@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 7</title>
+  </head>
+  <body>
+    <script>
+      function find(array, value) {
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === value) {
+            return i;
+          }
+        }
+        return -1;
+      }
+
+      const arr = ["test", 2, 1.5, false];
+
+      alert(find(arr, "test")); // 0
+      alert(find(arr, 2)); // 1
+      alert(find(arr, 1.5)); // 2
+
+      alert(find(arr, 0)); // -1
+    </script>
+  </body>
+</html>

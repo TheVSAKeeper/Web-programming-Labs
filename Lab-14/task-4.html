@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 4</title>
+    <style>
+      body {
+        display: flex;
+      }
+
+      td {
+        width: 30px;
+        height: 30px;
+      }
+
+      .r1 {
+        background-color: #00bcd4;
+      }
+
+      .r2 {
+        background-color: #000083;
+      }
+
+      .r3 {
+        background-color: #fda500;
+      }
+
+      .r4 {
+        background-color: #ed81ed;
+      }
+
+      .r5 {
+        background-color: #00fd00;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function writeFirstTable(n) {
+        let s;
+        document.write("<table>");
+
+        for (let i = 0; i < n; i++) {
+          document.write("<tr>");
+
+          for (let j = 0; j < n; j++) {
+            if (n - i > j + 2) {
+              s = "class='r1'";
+            } else {
+              s = "class='r2'";
+            }
+
+            document.write("<td " + s + "> </td>");
+          }
+
+          document.write("</tr>");
+        }
+
+        document.write("</table>");
+      }
+
+      function writeSecondTable(n) {
+        let s;
+        document.write("<table>");
+
+        for (let i = 0; i < n; i++) {
+          document.write("<tr>");
+
+          for (let j = 0; j < n; j++) {
+            if (i > j - 1) {
+              s = "class='r3'";
+            } else {
+              s = "class='r2'";
+            }
+
+            document.write("<td " + s + "> </td>");
+          }
+
+          document.write("</tr>");
+        }
+
+        document.write("</table>");
+      }
+
+      function writeThirdTable(n) {
+        let s;
+        let period = n / 2 - 1;
+        let offset = 0;
+
+        document.write("<table>");
+
+        for (let i = 0; i < n; i++) {
+          document.write("<tr>");
+
+          for (let j = 0; j < n; j++) {
+            if ((i + offset) % period === (n - j) % period) {
+              s = "class='r5'";
+            } else {
+              s = "class='r4'";
+            }
+
+            document.write("<td " + s + "> </td>");
+          }
+
+          document.write("</tr>");
+        }
+
+        document.write("</table>");
+      }
+
+      const n = 10;
+
+      writeFirstTable(n);
+      writeSecondTable(n);
+      writeThirdTable(n);
+    </script>
+  </body>
+</html>

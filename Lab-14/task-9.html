@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 9</title>
+  </head>
+  <body>
+    <script>
+      function aclean(words) {
+        const anagrams = new Map();
+
+        for (let word of words) {
+          const sortedWord = word.toLowerCase().split("").sort().join("");
+
+          anagrams.set(sortedWord, word);
+        }
+
+        return Array.from(anagrams.values());
+      }
+
+      const words = [
+        "воз",
+        "киборг",
+        "корсет",
+        "зов",
+        "гробик",
+        "сектор",
+        "костер",
+      ];
+
+      alert(aclean(words));
+    </script>
+  </body>
+</html>
