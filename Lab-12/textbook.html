@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Учебник</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-right: 100px;
+        margin-left: 100px;
+      }
+
+      span {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 40px;
+        margin: -5px 0;
+        color: yellow;
+        border: 2px solid black;
+      }
+
+      span.first {
+        z-index: 1;
+        align-self: flex-start;
+        background-color: lightgray;
+      }
+
+      span.second {
+        z-index: 2;
+        align-self: center;
+        background-color: darkgreen;
+      }
+
+      span.third {
+        z-index: 3;
+        align-self: flex-end;
+        background-color: lightgray;
+      }
+
+      .text {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        margin: 60px;
+      }
+
+      u {
+        font-weight: bold;
+        color: red;
+      }
+
+      b {
+        font-size: 20px;
+      }
+
+      .footer {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        position: absolute;
+        right: 20px;
+        bottom: 5px;
+        padding: 5px;
+      }
+
+      hr {
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        border: none;
+        background-color: rgb(255, 0, 0);
+      }
+
+      hr.first {
+        right: 17px;
+        bottom: 8px;
+      }
+
+      hr.second {
+        right: 17px;
+        bottom: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="first">HTML</span>
+      <span class="second">CSS</span>
+      <span class="third">JavaScript</span>
+    </div>
+    <div class="text">
+      <p>
+        Спецификация <b>CSS</b>(<u>Cascading Style Sheets</u>) позволяет
+        остаться в рамках декларативного характера разметки страницы и дает
+        полный контроль над формой представления элементов <u>HTML-разметки</u>.
+      </p>
+      <p>
+        <b> Каскадные таблицы стилей</b> призваны разрешить противоречие между
+        точностью определения размеров картинок и приложений с одной стороны, и
+        точностью определения размеров блоков текста и его начертания - с
+        другой.
+      </p>
+    </div>
+    <hr class="first" />
+    <hr class="second" />
+    <div class="footer">Учебник CSS</div>
+  </body>
+</html>
