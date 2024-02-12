@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Анкета пользователя</title>
+  </head>
+  <body>
+    <h3 align="center">Анкета пользователя</h3>
+    <p>Ответьте, пожалуйста, на вопросы:</p>
+    <form>
+      <table>
+        <tr>
+          <td>Ваша фамилия:</td>
+          <td>
+            <label>
+              <input name="lastName" size="35" type="text" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Ваше имя:</td>
+          <td>
+            <label>
+              <input name="firstName" size="35" type="text" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Ваше отчество:</td>
+          <td>
+            <label>
+              <input name="middleName" size="35" type="text" />
+            </label>
+          </td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <label>
+        Ваш пол:
+        <br />
+        <i>
+          <input name="gender" type="radio" value="male" />
+          Мужской
+          <br />
+          <input name="gender" type="radio" value="female" />
+          Женский
+        </i>
+      </label>
+
+      <br />
+      <hr />
+
+      <label>
+        Семейное положение:
+        <br />
+        <i>
+          <input name="maritalStatus" type="radio" value="single" />Холост/Не
+          замужем
+          <br />
+          <input
+            name="maritalStatus"
+            type="radio"
+            value="married"
+          />Женат/Замужем
+        </i>
+      </label>
+
+      <br />
+      <br />
+
+      <label>
+        Количество детей
+        <input name="children" type="number" />
+      </label>
+
+      <hr />
+
+      <table>
+        <tr>
+          <td>Страна:</td>
+          <td>
+            <label>
+              <select name="country">
+                <option value="Russia">Россия</option>
+                <option value="Ukraine">Украина</option>
+                <option value="Belarus">Беларусь</option>
+                <option value="Kazakhstan">Казахстан</option>
+              </select>
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Другая:</td>
+          <td>
+            <label>
+              <input name="other" size="25" type="text" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Индекс:</td>
+          <td>
+            <label>
+              <input
+                maxlength="6"
+                name="zip"
+                size="6"
+                type="text"
+                value="999999"
+              />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Город:</td>
+          <td>
+            <label>
+              <input name="city" size="20" type="text" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Улица:</td>
+          <td>
+            <label>
+              <input name="street" size="35" type="text" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Дом:</td>
+          <td>
+            <label>
+              <input name="house" size="6" type="text" />
+            </label>
+            <label>
+              Квартира:
+              <input name="apartment" size="6" type="text" />
+            </label>
+          </td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <label>
+        Электронный адрес:
+        <input name="email" size="40" type="email" />
+      </label>
+
+      <br />
+      <hr />
+
+      <label>
+        <textarea
+          cols="64"
+          name="feedback"
+          placeholder="Спасибо за заполнение анкеты! Мы ценим ваше время и стремимся улучшить качество нашего сервиса. Пожалуйста, оставьте свой отзыв о процессе заполнения анкеты."
+          rows="6"
+        ></textarea>
+      </label>
+
+      <br />
+      <hr />
+
+      <input type="submit" value="Подача запроса" />
+      <input type="reset" value="Сброс" />
+    </form>
+  </body>
+</html>

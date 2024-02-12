@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Список продуктов</title>
+    <link href="task-1.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Список продуктов</h1>
+      <form class="form">
+        <input id="productName" placeholder="Название продукта" type="text" />
+        <input id="productPrice" placeholder="Стоимость" type="text" />
+        <br />
+        <button onclick="addProduct()">Добавить</button>
+      </form>
+      <ul id="products"></ul>
+      <button onclick="calculateTotal()">Общая сумма</button>
+      <span id="total"></span>
+    </div>
+
+    <script src="task-1.js"></script>
+  </body>
+</html>

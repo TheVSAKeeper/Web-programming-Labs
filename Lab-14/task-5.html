@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 5</title>
+  </head>
+  <body>
+    <script>
+      function print(message, array) {
+        document.writeln(`<h3>${message}</h3>`);
+        for (let i = 0; i < array.length; i++) {
+          document.writeln(`${JSON.stringify(array[i], "", 4)}<br/>`);
+        }
+      }
+
+      function sortByField(array, field) {
+        return array.sort(function (a, b) {
+          return a[field] > b[field] ? 1 : a[field] < b[field] ? -1 : 0;
+        });
+      }
+
+      const users = [
+        {
+          name: "Вася",
+          surname: "Иванов",
+          age: 20,
+        },
+        {
+          name: "Петя",
+          surname: "Чапаев",
+          age: 25,
+        },
+        {
+          name: "Маша",
+          surname: "Медведева",
+          age: 18,
+        },
+        {
+          name: "Коля",
+          surname: "Сидоров",
+          age: 22,
+        },
+        {
+          name: "Лена",
+          surname: "Петрова",
+          age: 19,
+        },
+      ];
+
+      print("source", users);
+      print("name", sortByField(users, "name"));
+      print("surname", sortByField(users, "surname"));
+      print("age", sortByField(users, "age"));
+    </script>
+  </body>
+</html>

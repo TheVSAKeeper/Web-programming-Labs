@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 3</title>
+  </head>
+  <body>
+    <script>
+      function print(message, array) {
+        document.writeln(`<h3>${message}</h3>`);
+        for (let i = 0; i < array.length; i++) {
+          document.writeln(`${JSON.stringify(array[i], "", 4)}<br/>`);
+        }
+      }
+
+      function filterByTitleLength(array) {
+        let result = [];
+
+        array.forEach(function (element) {
+          let title = element.title;
+          title = title.replace(/[.,"«\s:-]/g, "");
+
+          if (title.length > 40) {
+            result.push(element);
+          }
+        });
+
+        return result;
+      }
+
+      let array = [
+        {
+          title: "Приглашаем на День открытых дверей.",
+          source: "vyatsu",
+        },
+        {
+          title: "Искусство против коррупции.",
+          source: "vyatsu",
+        },
+        {
+          title:
+            "Научно-практическая конференция «Управленческие образовательные практики в студенческих исследованиях» собрала около 80 участников.",
+          source: "vyatsu",
+        },
+        {
+          title: "Искусство против коррупции.",
+          source: "vyatsu",
+        },
+        {
+          title:
+            "Приглашаем к участию во Всероссийском социологическом диктанте.",
+          source: "vyatsu",
+        },
+        {
+          title: "Улицы в кировском Урванцево построены на 75%.",
+          source: "yandex",
+        },
+        {
+          title: "В Кирове за 69 миллионов рублей отремонтируют автовокзал.",
+          source: "yandex",
+        },
+        {
+          title:
+            "Шульгинов: власти обсуждают снятие запрета на экспорт Аи-92 и Аи-95.",
+          source: "yandex",
+        },
+        {
+          title: "Православные верующие отмечают 8 ноября Дмитриев день.",
+          source: "yandex",
+        },
+      ];
+
+      print("", filterByTitleLength(array));
+    </script>
+  </body>
+</html>

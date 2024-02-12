@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 6</title>
+  </head>
+  <body>
+    <script>
+      function uniqueApplications(array) {
+        let result = new Set();
+
+        array.forEach((element) => {
+          let applications = element.application;
+
+          applications.forEach((application) => {
+            result.add(application);
+          });
+        });
+
+        return Array.from(result);
+      }
+
+      let array = [
+        {
+          model: "Bert",
+          architecture: "encoder",
+          application: ["classification", "masked prediction", "embedding"],
+        },
+        {
+          model: "GPT",
+          architecture: "decoder",
+          application: [
+            "text generation",
+            "question answering",
+            "instructed generation",
+            "classification",
+          ],
+        },
+        {
+          model: "T5",
+          architecture: "encoder-decoder",
+          application: [
+            "classification",
+            "summarization",
+            "question answering",
+          ],
+        },
+      ];
+
+      alert(uniqueApplications(array)); // ["classification", "masked prediction", "embedding", "text generation", "question answering", "instructed generation", "summarization"]
+    </script>
+  </body>
+</html>

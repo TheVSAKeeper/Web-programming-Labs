@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 9</title>
+  </head>
+  <body>
+    <script>
+      function print(message, array) {
+        document.writeln(`<h3>${message}</h3>`);
+        for (let i = 0; i < array.length; i++) {
+          document.writeln(`${JSON.stringify(array[i], "", 4)}<br/>`);
+        }
+      }
+
+      function getAverage(array) {
+        let sum = 0;
+
+        array.forEach((element) => {
+          sum += element;
+        });
+
+        return sum / array.length;
+      }
+
+      function addSqrtAvr(array) {
+        array.forEach((element) => {
+          let average = getAverage(element.values);
+          let sqrt = Math.sqrt(average);
+          element.avr = average.toFixed(2);
+          element.sqrt_avr = sqrt.toFixed(2);
+        });
+
+        return array;
+      }
+
+      let array = [
+        {
+          id: 1,
+          values: [-1, 3, 5, 3, 6, 9],
+        },
+        {
+          id: 10,
+          values: [-1, 2, 4, 3, -16, 7],
+        },
+        {
+          id: 12,
+          values: [5, -2, 7, -9, 2, 1],
+        },
+        {
+          id: 16,
+          values: [-3, 3, 5, -6, -9, 9],
+        },
+        {
+          id: 21,
+          values: [0, 9, 4, -7, 1, 2],
+        },
+      ];
+
+      print("", addSqrtAvr(array));
+    </script>
+  </body>
+</html>

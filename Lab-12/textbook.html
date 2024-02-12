@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Учебник</title>
+    <style>
+      body {
+        height: 100%;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        width: 500px;
+        margin-top: 20px;
+      }
+
+      span {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 40px;
+        margin: -5px 0;
+        color: yellow;
+        border: 2px solid black;
+      }
+
+      span.first {
+        z-index: 1;
+        align-self: flex-start;
+        background-color: lightgray;
+      }
+
+      span.second {
+        z-index: 2;
+        align-self: center;
+        background-color: darkgreen;
+      }
+
+      span.third {
+        z-index: 3;
+        align-self: flex-end;
+        background-color: lightgray;
+      }
+
+      .text {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        margin: 60px;
+      }
+
+      u {
+        font-weight: bold;
+        color: red;
+      }
+
+      b {
+        font-size: 20px;
+      }
+
+      .back {
+        font-family: Arial, sans-serif;
+        font-size: 200px;
+        font-weight: bold;
+        position: absolute;
+        z-index: -2;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        color: rgba(45, 45, 45, 0.3);
+      }
+
+      .footer {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 30px;
+      }
+
+      hr {
+        position: absolute;
+        align-self: center;
+        width: 120px;
+        height: 2px;
+        margin-right: -8px;
+        border: none;
+        background-color: rgb(255, 0, 0);
+      }
+
+      hr.first {
+        margin-top: 0;
+      }
+
+      hr.second {
+        margin-bottom: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <span class="first">HTML</span>
+        <span class="second">CSS</span>
+        <span class="third">JavaScript</span>
+      </div>
+    </header>
+
+    <div class="text">
+      <div class="back">CSS</div>
+      <p>
+        Спецификация <b>CSS</b>(<u>Cascading Style Sheets</u>) позволяет
+        остаться в рамках декларативного характера разметки страницы и дает
+        полный контроль над формой представления элементов <u>HTML-разметки</u>.
+      </p>
+      <p>
+        <b> Каскадные таблицы стилей</b> призваны разрешить противоречие между
+        точностью определения размеров картинок и приложений с одной стороны, и
+        точностью определения размеров блоков текста и его начертания - с
+        другой.
+      </p>
+    </div>
+
+    <footer class="footer">
+      <div>Учебник CSS</div>
+      <hr class="first" />
+      <hr class="second" />
+    </footer>
+  </body>
+</html>

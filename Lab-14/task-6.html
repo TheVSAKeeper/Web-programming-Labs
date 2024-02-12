@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 6</title>
+  </head>
+  <body>
+    <script>
+      function filter(array, predicate) {
+        let result = [];
+        for (let item of array) {
+          if (predicate(item)) {
+            result.push(item);
+          }
+        }
+        return result;
+      }
+
+      function inBetween(a, b) {
+        return function (x) {
+          return x >= a && x <= b;
+        };
+      }
+
+      function inArray(array) {
+        return function (item) {
+          return array.some((element) => element === item);
+        };
+      }
+
+      const arr = [1, 2, 3, 4, 5, 6, 7];
+
+      alert(
+        filter(arr, function (a) {
+          return a % 2 === 0;
+        }),
+      ); // 2,4,6
+
+      alert(filter(arr, inBetween(3, 6))); // 3,4,5,6
+      alert(filter(arr, inArray([1, 2, 10]))); // 1,2
+    </script>
+  </body>
+</html>

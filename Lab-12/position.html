@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Позиционирование в HTML</title>
+    <style>
+      p {
+        font-family: Arial, monospace;
+        font-size: 36px;
+        font-weight: bold;
+        position: absolute;
+      }
+
+      p.text {
+        position: relative;
+        z-index: 1;
+      }
+
+      p.shadow {
+        position: absolute;
+        z-index: 0;
+        top: 3px;
+        left: 12px;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="text">Позиционирование в HTML</p>
+    <p class="shadow">Позиционирование в HTML</p>
+  </body>
+</html>

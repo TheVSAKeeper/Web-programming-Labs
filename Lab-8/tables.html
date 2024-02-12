@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Работа с таблицами в HTML</title>
+  </head>
+  <body>
+    <table align="center" border="1" width="50%">
+      <caption>
+        Пример сложной таблицы
+      </caption>
+      <!--      <tr height=10px">
+<th width="80%">Заголовок 1</th>
+<th>Заголовок 2</th>
+<th>Заголовок 3</th>
+</tr>  -->
+      <tr>
+        <th width="80%">Заголовок 1</th>
+        <th>Заголовок 2</th>
+        <th>Заголовок 3</th>
+      </tr>
+      <tr>
+        <td rowspan="3">Объединенные ячейки A, D, G</td>
+        <td>Ячейка B</td>
+        <td>Ячейка C</td>
+      </tr>
+      <tr>
+        <td colspan="2">Объединенные ячейки E, F</td>
+      </tr>
+      <tr>
+        <td>Ячейка H</td>
+        <td>Ячейка J</td>
+      </tr>
+    </table>
+
+    <br />
+    <br />
+
+    <table align="center" border="2" cellpadding="10" cellspacing="0">
+      <tr>
+        <th bgcolor="red" colspan="3">
+          <font color="white">Периферийные устройства компьютера</font>
+        </th>
+      </tr>
+      <tr>
+        <th bgcolor="#d3d3d3">Название</th>
+        <th bgcolor="#d3d3d3">Назначение</th>
+        <th bgcolor="#d3d3d3">Виды</th>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="#d3d3d3" rowspan="2" valign="center">
+          <b><i>Модемы</i></b>
+        </td>
+        <td align="center" bgcolor="white" rowspan="2" valign="top">
+          Предназначен для обмена информацией между удаленными компьютерами.
+        </td>
+        <td align="center" bgcolor="white" valign="center">
+          <b><i>Внутренний</i></b>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="white" valign="center">
+          <b><i>Внешний</i></b>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="#d3d3d3" rowspan="3" valign="center">
+          <b><i>Принтеры</i></b>
+        </td>
+        <td align="center" bgcolor="white" rowspan="3" valign="top">
+          Устройства для вывода информации на бумагу
+        </td>
+        <td align="center" bgcolor="white" valign="center">
+          <b><i>Матричный</i></b>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="white" valign="center">
+          <b><i>Струйный</i></b>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="white" valign="center">
+          <b><i>Лазерный</i></b>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="#d3d3d3" rowspan="2" valign="center">
+          <b><i>Сканеры</i></b>
+        </td>
+        <td align="center" bgcolor="white" rowspan="2" valign="top">
+          Устройства для ввода информации в компьютер через снимок
+        </td>
+        <td align="center" valign="center" bgcolor="white">
+          <b><i>Ручной</i></b>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="white" valign="center">
+          <b><i>Настольный</i></b>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Простая форма</title>
+  </head>
+  <body>
+    <form>
+      <table>
+        <tr>
+          <td>Пожалуйста, введите ваши данные:</td>
+        </tr>
+        <tr>
+          <td>Имя:</td>
+          <td>
+            <label>
+              <input name="name" size="35" type="text" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Фамилия:</td>
+          <td>
+            <label>
+              <input name="surname" size="35" type="text" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Улица:</td>
+          <td>
+            <label>
+              <input name="street" size="35" type="text" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Город:</td>
+          <td>
+            <label>
+              <input name="city" size="35" type="text" />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Индекс:</td>
+          <td>
+            <label>
+              <input
+                maxlength="6"
+                name="zip"
+                size="6"
+                type="text"
+                value="999999"
+              />
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>Какой поисковой системой вы чаще всего пользуетесь?</td>
+          <td>
+            <label>
+              <input checked name="search" type="radio" value="nigma" />
+              nigma
+            </label>
+            <label>
+              <input name="search" type="radio" value="rambler" />
+              rambler
+            </label>
+            <label>
+              <input name="search" type="radio" value="google" />
+              google
+            </label>
+            <label>
+              <input name="search" type="radio" value="yandex" />
+              yandex
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>На каком почтовом сервере вы зарегистрированы?</td>
+          <td>
+            <label>
+              <input name="mail" type="checkbox" value="mail" />
+              mail
+            </label>
+            <label>
+              <input name="rambler" type="checkbox" value="rambler" />
+              rambler
+            </label>
+            <label>
+              <input name="inbox" type="checkbox" value="inbox" />
+              inbox
+            </label>
+            <label>
+              <input name="yandex" type="checkbox" value="yandex" />
+              yandex
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>У вас есть постоянный доступ в Интернет?</td>
+          <td>
+            <label>
+              <select name="internet">
+                <option value="yes">ДА</option>
+                <option value="no">НЕТ</option>
+              </select>
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Отправить данные" /></td>
+        </tr>
+      </table>
+    </form>
+
+    <form>
+      <p>Пожалуйста, введите имя учетной записи и пароль:</p>
+      <p>
+        <label>
+          Имя учетной записи:
+          <input name="username" type="text" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Пароль:
+          <input name="password" type="password" />
+        </label>
+      </p>
+      <p>
+        <input type="submit" value="Регистрация" />
+        <input type="reset" value="Очистить" />
+      </p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 3</title>
+  </head>
+  <body>
+    <script>
+      let x = prompt("Введите первое число:", "0");
+      let y = prompt("Введите второе число:", "1");
+      let sign = prompt("Введите знак операции (+, -, *, /):");
+
+      x = Number(x);
+      y = Number(y);
+
+      let result;
+
+      switch (sign) {
+        case "+":
+          result = x + y;
+          break;
+        case "-":
+          result = x - y;
+          break;
+        case "*":
+          result = x * y;
+          break;
+        case "/":
+          if (y === 0) {
+            alert("Ошибка: деление на 0 невозможно");
+          } else {
+            result = x / y;
+          }
+          break;
+        default:
+          alert("Ошибка: неверный знак операции");
+      }
+
+      if (result !== undefined) {
+        alert(`Результат: ${result}`);
+      }
+    </script>
+  </body>
+</html>
