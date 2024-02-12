@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 7</title>
+  </head>
+  <body>
+    <script>
+      function codesWithMatchingColors(array) {
+        let result = [];
+
+        array.forEach(function (element) {
+          let home = element.home;
+          let colors = {};
+
+          for (let property in home) {
+            let color = home[property];
+
+            if (colors.hasOwnProperty(color)) {
+              colors[color]++;
+            } else {
+              colors[color] = 1;
+            }
+          }
+
+          for (let count of Object.values(colors)) {
+            if (count >= 2) {
+              result.push(element.code);
+              break;
+            }
+          }
+        });
+        return result;
+      }
+
+      let array = [
+        {
+          name: "Alice",
+          code: 5005,
+          home: { roof: "yellow", door: "yellow", wall: "yellow" },
+        },
+        {
+          name: "Bob",
+          code: 5105,
+          home: { roof: "green", door: "grey", wall: "grey" },
+        },
+        {
+          name: "Carol",
+          code: 5015,
+          home: { roof: "yellow", door: "white", wall: "yellow" },
+        },
+        {
+          name: "Dave",
+          code: 5115,
+          home: { roof: "pink", door: "red", wall: "yellow" },
+        },
+      ];
+
+      alert(codesWithMatchingColors(array)); // [5005, 5105, 5015]
+    </script>
+  </body>
+</html>

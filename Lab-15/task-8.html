@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 8</title>
+  </head>
+  <body>
+    <script>
+      function removeByColor(array) {
+        let result = [];
+        let deletedColor = prompt("Какой цвет вы хотите удалить из массива?");
+        deletedColor = deletedColor.toLowerCase();
+
+        array.forEach(function (element) {
+          let home = element.home;
+          let isContains = false;
+
+          for (let property in home) {
+            let color = home[property];
+
+            if (color === deletedColor) {
+              isContains = true;
+              break;
+            }
+          }
+          if (isContains === false) {
+            result.push(element);
+          }
+        });
+
+        if (result.length === array.length) {
+          alert("Такого объекта в массиве нет");
+        }
+
+        return result;
+      }
+
+      let array = [
+        {
+          name: "Alice",
+          code: 5005,
+          home: { roof: "yellow", door: "yellow", wall: "yellow" },
+        },
+        {
+          name: "Bob",
+          code: 5105,
+          home: { roof: "green", door: "grey", wall: "grey" },
+        },
+        {
+          name: "Carol",
+          code: 5015,
+          home: { roof: "yellow", door: "white", wall: "yellow" },
+        },
+        {
+          name: "Dave",
+          code: 5115,
+          home: { roof: "pink", door: "red", wall: "yellow" },
+        },
+      ];
+
+      alert(JSON.stringify(removeByColor(array), "", 4));
+    </script>
+  </body>
+</html>

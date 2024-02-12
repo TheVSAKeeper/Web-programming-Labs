@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задание 5</title>
+  </head>
+  <body>
+    <script>
+      function averageAge(array) {
+        let sum = 0;
+
+        array.forEach(function (element) {
+          sum += element.age;
+        });
+
+        return sum / array.length;
+      }
+
+      let array = [
+        { name: "Alex", age: 30, from: "Moscow" },
+        { name: "Sofa", age: 22, from: "Kazan" },
+        { name: "Ilya", age: 26, from: "Piter" },
+        { name: "Kolya", age: 30, from: "Kirov" },
+      ];
+
+      alert(averageAge(array)); // 27
+    </script>
+  </body>
+</html>
