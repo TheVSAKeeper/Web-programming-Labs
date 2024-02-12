@@ -4,9 +4,11 @@ function addTask() {
 
   if (task === "") {
     alert("Введите текст дела.");
-  } else {
-    let taskList = document.createElement("ul");
-    taskList.innerHTML = `
+    return;
+  }
+
+  let taskList = document.createElement("ul");
+  taskList.innerHTML = `
             <li>
                 <input type="checkbox">
                 <span>${task}</span>
@@ -14,9 +16,8 @@ function addTask() {
             </li>
         `;
 
-    document.getElementById("lists").appendChild(taskList);
-    taskInput.value = "";
-  }
+  document.getElementById("lists").appendChild(taskList);
+  taskInput.value = "";
 }
 
 function addList() {

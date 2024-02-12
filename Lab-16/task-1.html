@@ -4,21 +4,53 @@
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Список продуктов</title>
-    <link href="task-1.css" rel="stylesheet" />
+    <link href="css/w3.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container">
-      <h1>Список продуктов</h1>
-      <form class="form">
-        <input id="productName" placeholder="Название продукта" type="text" />
-        <input id="productPrice" placeholder="Стоимость" type="number" />
-        <br />
-        <button onclick="addProduct()">Добавить</button>
-      </form>
-      <ul id="products"></ul>
+    <div class="w3-content">
+      <div class="w3-card-4 w3-margin-top">
+        <header class="w3-container w3-teal">
+          <h2>Список продуктов</h2>
+        </header>
+        <div class="w3-container w3-padding">
+          <ul class="w3-ul w3-border w3-margin-bottom" id="products"></ul>
 
-      <button onclick="calculateTotal()">Общая сумма</button>
-      <span id="total"></span>
+          <button
+            class="w3-button w3-round w3-border w3-border-teal w3-right"
+            onclick="calculateTotal()"
+          >
+            Общая сумма
+          </button>
+
+          <span id="total"></span>
+        </div>
+      </div>
+
+      <div class="w3-card-4 w3-margin-top">
+        <header class="w3-container w3-teal">
+          <h2>Добавление продукта</h2>
+        </header>
+        <div class="w3-container w3-padding">
+          <label>
+            Название продукта
+            <input
+              class="w3-input w3-margin-bottom"
+              id="productName"
+              type="text"
+          /></label>
+          <label>
+            Стоимость
+            <input class="w3-input" id="productPrice" type="number"
+          /></label>
+          <br />
+          <button
+            class="w3-button w3-round w3-border w3-border-teal w3-right"
+            onclick="addProduct()"
+          >
+            Добавить
+          </button>
+        </div>
+      </div>
     </div>
 
     <script src="task-1.js"></script>

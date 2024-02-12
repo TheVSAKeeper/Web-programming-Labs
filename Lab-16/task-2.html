@@ -3,18 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>TO DO</title>
-    <link href="task-2.css" rel="stylesheet" />
+    <title>TODO</title>
+    <link href="css/w3.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container">
-      <h1>TO DO</h1>
-      <div class="form">
-        <input id="taskInput" placeholder="Добавить новое дело" type="text" />
-        <button onclick="addTask()">Добавить дело</button>
-        <button onclick="addList()">Добавить новый список дел</button>
+    <div class="w3-content">
+      <div class="w3-card-4 w3-margin-top">
+        <header class="w3-container w3-teal">
+          <h2>TODO</h2>
+        </header>
+        <div class="w3-container w3-padding">
+          <ul class="w3-ul w3-border w3-margin-bottom" id="lists"></ul>
+        </div>
       </div>
-      <div id="lists"></div>
+
+      <div class="w3-card-4 w3-margin-top">
+        <header class="w3-container w3-teal">
+          <h2>Добавление</h2>
+        </header>
+        <div class="w3-container w3-padding">
+          <label>
+            Новое дело
+            <input class="w3-input w3-margin-bottom" id="taskInput" type="text"
+          /></label>
+
+          <button
+            class="w3-button w3-round w3-border w3-border-teal w3-right"
+            onclick="addTask()"
+          >
+            Добавить дело
+          </button>
+
+          <button
+            class="w3-button w3-round w3-border w3-border-teal w3-right"
+            onclick="addList()"
+          >
+            Добавить новый список дел
+          </button>
+        </div>
+      </div>
     </div>
 
     <script src="task-2.js"></script>
