@@ -1,9 +1,11 @@
 function addTask() {
-  var taskInput = document.getElementById("taskInput");
-  var task = taskInput.value.trim();
+  let taskInput = document.getElementById("taskInput");
+  let task = taskInput.value.trim();
 
-  if (task !== "") {
-    var taskList = document.createElement("ul");
+  if (task === "") {
+    alert("Введите текст дела.");
+  } else {
+    let taskList = document.createElement("ul");
     taskList.innerHTML = `
             <li>
                 <input type="checkbox">
@@ -14,13 +16,11 @@ function addTask() {
 
     document.getElementById("lists").appendChild(taskList);
     taskInput.value = "";
-  } else {
-    alert("Введите текст дела.");
   }
 }
 
 function addList() {
-  var list = document.createElement("ul");
+  let list = document.createElement("ul");
   list.innerHTML = `
         <li>
             <input type="checkbox">
@@ -33,11 +33,11 @@ function addList() {
 }
 
 function deleteTask(button) {
-  var taskItem = button.parentNode;
+  let taskItem = button.parentNode;
   taskItem.parentNode.removeChild(taskItem);
 }
 
 function deleteList(button) {
-  var list = button.parentNode.parentNode;
+  let list = button.parentNode.parentNode;
   list.parentNode.removeChild(list);
 }

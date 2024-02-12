@@ -1,13 +1,13 @@
 function addProduct() {
-  var productName = document.getElementById("productName").value;
-  var productPrice = parseFloat(document.getElementById("productPrice").value);
+  let productName = document.getElementById("productName").value;
+  let productPrice = parseFloat(document.getElementById("productPrice").value);
 
   if (productName && !isNaN(productPrice)) {
-    var productList = document.getElementById("products");
-    var li = document.createElement("li");
-    li.textContent = productName + " - " + productPrice.toFixed(2);
+    let productList = document.getElementById("products");
+    let li = document.createElement("li");
+    li.textContent = `${productName} - ${productPrice.toFixed(2)}`;
 
-    var deleteButton = document.createElement("button");
+    let deleteButton = document.createElement("button");
     deleteButton.textContent = "Удалить";
     deleteButton.className = "delete-btn";
     deleteButton.onclick = () => {
@@ -25,8 +25,8 @@ function addProduct() {
 }
 
 function calculateTotal() {
-  var total = 0;
-  var productList = document
+  let total = 0;
+  let productList = document
     .getElementById("products")
     .getElementsByTagName("li");
 
@@ -36,5 +36,5 @@ function calculateTotal() {
   }
 
   document.getElementById("total").textContent =
-    "Общая сумма: " + total.toFixed(2);
+    `Общая сумма: ${total.toFixed(2)}`;
 }

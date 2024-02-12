@@ -2,21 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>TO DO</title>
-    <link rel="stylesheet" href="task-2.css" />
+    <link href="task-2.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
       <h1>TO DO</h1>
       <div class="form">
-        <input type="text" id="taskInput" placeholder="Добавить новое дело" />
+        <input id="taskInput" placeholder="Добавить новое дело" type="text" />
         <button onclick="addTask()">Добавить дело</button>
         <button onclick="addList()">Добавить новый список дел</button>
       </div>
-      <div id="lists">
-        <!-- Сюда будут добавляться списки дел -->
-      </div>
+      <div id="lists"></div>
     </div>
 
     <script src="task-2.js"></script>

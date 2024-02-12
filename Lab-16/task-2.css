@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -10,8 +10,6 @@ body {
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -24,20 +22,18 @@ h1 {
 
 input[type="text"] {
     width: calc(70% - 5px);
-    padding: 8px;
     margin-right: 5px;
-    border-radius: 4px;
+    padding: 8px;
     border: 1px solid #ccc;
 }
 
 button {
+    margin-right: 5px;
     padding: 8px 16px;
-    background-color: #007bff;
+    cursor: pointer;
     color: #fff;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 5px;
+    background-color: #555a5a;
 }
 
 button:last-child {
@@ -45,8 +41,8 @@ button:last-child {
 }
 
 ul {
-    list-style-type: none;
     padding: 0;
+    list-style-type: none;
 }
 
 li {
@@ -54,12 +50,12 @@ li {
 }
 
 .delete-list-btn, .delete-task-btn {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+    margin-left: 5px;
     padding: 3px 6px;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    background-color: #dc3545;
 }
 
 .delete-list-btn:hover, .delete-task-btn:hover {
