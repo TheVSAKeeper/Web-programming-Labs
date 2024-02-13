@@ -1,34 +1,180 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>Калькулятор</title>
-    <link href="task-3.css" rel="stylesheet" />
+    <link href="css/w3.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="calculator">
-      <input disabled id="display" type="text" />
-      <div class="buttons">
-        <button onclick="appendToDisplay('(')">(</button>
-        <button onclick="appendToDisplay(')')">)</button>
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button onclick="appendToDisplay('/')">/</button>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button onclick="appendToDisplay('*')">*</button>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button onclick="appendToDisplay('-')">-</button>
-        <button onclick="appendToDisplay('0')">0</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="calculate()">=</button>
-        <button onclick="appendToDisplay('+')">+</button>
-        <button onclick="clearDisplay()">C</button>
+    <div class="w3-content">
+      <div class="w3-card-4 w3-margin-top p">
+        <header class="w3-container w3-teal">
+          <h2>Калькулятор</h2>
+        </header>
+        <div class="w3-container w3-padding-16">
+          <input
+            class="w3-bar w3-margin-bottom"
+            disabled
+            id="display"
+            style="font-size: 24px; font-family: Cambria, ui-monospace"
+            type="text"
+          />
+          <div class="w3-row">
+            <div class="w3-row">
+              <button
+                class="w3-col s3 w3-border w3-button"
+                onclick="appendToDisplay('(')"
+              >
+                (
+              </button>
+              <button
+                class="w3-col s3 w3-border w3-button"
+                onclick="appendToDisplay(')')"
+              >
+                )
+              </button>
+              <button
+                class="w3-col s3 w3-border w3-button"
+                onclick="clearDisplay()"
+              >
+                C
+              </button>
+              <button
+                class="w3-col s3 w3-border w3-button"
+                onclick="calculate()"
+              >
+                =
+              </button>
+            </div>
+
+            <div class="w3-row">
+              <button
+                class="w3-col s3 w3-border w3-button"
+                onclick="appendToDisplay('+')"
+              >
+                +
+              </button>
+              <button
+                class="w3-col s3 w3-border w3-button"
+                onclick="appendToDisplay('-')"
+              >
+                -
+              </button>
+              <button
+                class="w3-col s3 w3-border w3-button"
+                onclick="appendToDisplay('/')"
+              >
+                /
+              </button>
+              <button
+                class="w3-col s3 w3-border w3-button"
+                onclick="appendToDisplay('*')"
+              >
+                *
+              </button>
+
+              <div class="w3-row w3-margin-bottom">
+                <button
+                  class="w3-col s4 w3-border w3-button"
+                  onclick="calculateAction(factorial)"
+                >
+                  !
+                </button>
+                <button
+                  class="w3-col s4 w3-border w3-button"
+                  onclick="calculateAction(binaryToDecimal)"
+                >
+                  2 -> 10
+                </button>
+                <button
+                  class="w3-col s4 w3-border w3-button"
+                  onclick="calculateAction(decimalToBinary)"
+                >
+                  10 -> 2
+                </button>
+              </div>
+
+              <button
+                class="w3-col s4 w3-border w3-button"
+                onclick="appendToDisplay('7')"
+              >
+                7
+              </button>
+              <button
+                class="w3-col s4 w3-border w3-button"
+                onclick="appendToDisplay('8')"
+              >
+                8
+              </button>
+              <button
+                class="w3-col s4 w3-border w3-button"
+                onclick="appendToDisplay('9')"
+              >
+                9
+              </button>
+            </div>
+            <div class="w3-row">
+              <button
+                class="w3-col s4 w3-border w3-button"
+                onclick="appendToDisplay('4')"
+              >
+                4
+              </button>
+              <button
+                class="w3-col s4 w3-border w3-button"
+                onclick="appendToDisplay('5')"
+              >
+                5
+              </button>
+              <button
+                class="w3-col s4 w3-border w3-button"
+                onclick="appendToDisplay('6')"
+              >
+                6
+              </button>
+            </div>
+            <div class="w3-row">
+              <button
+                class="w3-col s4 w3-border w3-button"
+                onclick="appendToDisplay('1')"
+              >
+                1
+              </button>
+              <button
+                class="w3-col s4 w3-border w3-button"
+                onclick="appendToDisplay('2')"
+              >
+                2
+              </button>
+              <button
+                class="w3-col s4 w3-border w3-button"
+                onclick="appendToDisplay('3')"
+              >
+                3
+              </button>
+            </div>
+
+            <div class="w3-row">
+              <button
+                class="w3-col s8 w3-border w3-button"
+                onclick="appendToDisplay('0')"
+              >
+                0
+              </button>
+              <button
+                class="w3-col s4 w3-border w3-button"
+                onclick="appendToDisplay('.')"
+              >
+                .
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

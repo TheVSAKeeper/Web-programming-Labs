@@ -1,10 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>TODO</title>
     <link href="css/w3.css" rel="stylesheet" />
+    <style>
+      ul li {
+        font-size: 18px;
+        position: relative;
+        cursor: pointer;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        transition: 0.2s;
+      }
+
+      ul li.checked {
+        text-decoration: line-through;
+        color: #fff;
+        background: #32a932;
+      }
+
+      ul li.checked::before {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        width: 7px;
+        height: 15px;
+        content: "";
+        transform: rotate(45deg);
+        border-width: 0 2px 2px 0;
+        border-style: solid;
+        border-color: #fff;
+      }
+    </style>
   </head>
   <body>
     <div class="w3-content">
@@ -12,16 +47,71 @@
         <header class="w3-container w3-teal">
           <h2>TODO</h2>
         </header>
-        <div class="w3-container w3-padding">
-          <label>
-            Выбрать список дел
-            <select
-              class="w3-select w3-margin-bottom"
-              id="tasks-lists"
-              name="option"
-            ></select>
-          </label>
-          <ul class="w3-ul w3-border w3-margin-bottom" id="lists"></ul>
+        <div class="w3-container w3-padding" id="lists-container">
+          <div class="w3-card-4 w3-margin-bottom">
+            <header class="w3-container w3-blue">
+              <h3>Список продуктов</h3>
+            </header>
+
+            <div class="w3-container w3-margin-top">
+              <ul class="w3-ul w3-border w3-margin-bottom">
+                <li
+                  class="w3-bar w3-border-white w3-border w3-hover-border-green"
+                >
+                  <span class="w3-bar-item"> Мясо </span>
+                  <button
+                    class="w3-bar-item w3-button w3-round w3-hover-red w3-right"
+                    onclick="deleteItem(this)"
+                  >
+                    &times;
+                  </button>
+                </li>
+                <li
+                  class="w3-bar w3-border-white w3-border w3-hover-border-green"
+                >
+                  <span class="w3-bar-item"> Морковь </span>
+                  <button
+                    class="w3-bar-item w3-button w3-round w3-hover-red w3-right"
+                    onclick="deleteItem(this)"
+                  >
+                    &times;
+                  </button>
+                </li>
+                <li
+                  class="w3-bar w3-border-white w3-border w3-hover-border-green"
+                >
+                  <span class="w3-bar-item"> Лук </span>
+                  <button
+                    class="w3-bar-item w3-button w3-round w3-hover-red w3-right"
+                    onclick="deleteItem(this)"
+                  >
+                    &times;
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="w3-bar w3-padding">
+              <input
+                class="w3-input w3-margin-bottom"
+                placeholder="Введите дело"
+                type="text"
+              />
+
+              <button
+                class="w3-bar-item w3-button w3-round w3-border w3-border-green"
+                onclick="addItem(this)"
+              >
+                Добавить дело
+              </button>
+              <button
+                class="w3-bar-item w3-right w3-button w3-round w3-border w3-border-red"
+                onclick="deleteList(this)"
+              >
+                Удалить список
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -31,24 +121,10 @@
         </header>
         <div class="w3-container w3-padding">
           <label>
-            Новое дело
-            <input class="w3-input w3-margin-bottom" id="taskInput" type="text"
-          /></label>
-
-          <button
-            class="w3-button w3-round w3-border w3-border-teal w3-margin-bottom"
-            onclick="addTask()"
-          >
-            Добавить дело
-          </button>
-
-          <br />
-
-          <label>
             Новый список дел
             <input
               class="w3-input w3-margin-bottom"
-              id="task-list-input"
+              id="list-title-input"
               type="text"
           /></label>
 
