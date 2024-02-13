@@ -20,17 +20,24 @@ function addTask() {
   taskInput.value = "";
 }
 
-function addList() {
-  let list = document.createElement("ul");
-  list.innerHTML = `
-        <li>
-            <input type="checkbox">
-            <span>Новый список дел</span>
-            <button class="delete-list-btn" onclick="deleteList(this)">Удалить список</button>
-        </li>
-    `;
+let listId = 0;
 
-  document.getElementById("lists").appendChild(list);
+function addList() {
+  let taskInput = document.getElementById("task-list-input");
+  let task = taskInput.value.trim();
+
+  if (task === "") {
+    alert("Введите название списка дела.");
+    return;
+  }
+
+  let list = document.createElement("option");
+  listId++;
+  list.value = listId;
+  list.id = `task-list-${listId}`;
+  list.textContent = `[${listId}] ${task}`;
+
+  document.getElementById("tasks-lists").appendChild(list);
 }
 
 function deleteTask(button) {
