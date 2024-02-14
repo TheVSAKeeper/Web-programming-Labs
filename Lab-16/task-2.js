@@ -1,22 +1,21 @@
 const list = document.querySelector("ul");
 list.addEventListener(
   "click",
-  (ev) => {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("checked");
+  (event) => {
+    if (event.target.tagName === "LI") {
+      event.target.classList.toggle("checked");
     }
   },
   false,
 );
 
-function addItem(button) {
+function addTask(button) {
   const list = button.parentElement.parentElement;
   const itemsContainer = list.getElementsByClassName(
     "w3-ul w3-border w3-margin-bottom",
   )[0];
 
   const taskInput = list.getElementsByClassName("w3-input w3-margin-bottom")[0];
-
   let task = taskInput.value.trim();
 
   if (task === "") {
@@ -27,16 +26,21 @@ function addItem(button) {
   const newItem = document.createElement("li");
   newItem.className = "w3-bar w3-border-white w3-border w3-hover-border-green";
   newItem.innerHTML = `<span class="w3-bar-item"> ${task} </span>
-            <button
-              class="w3-bar-item w3-button w3-round w3-hover-red w3-right"
-              onclick="deleteItem(this)"
-            >
-              &times;
-            </button>
-           `;
+    <button
+      class="w3-bar-item w3-button w3-round w3-hover-red w3-right"
+      onclick="deleteTask(this)"
+    >
+      &times;
+    </button>
+    `;
 
   itemsContainer.appendChild(newItem);
   taskInput.value = "";
+}
+
+function deleteTask(button) {
+  let taskItem = button.parentNode;
+  taskItem.parentNode.removeChild(taskItem);
 }
 
 function addList() {
@@ -71,7 +75,7 @@ function addList() {
 
               <button
                 class="w3-bar-item w3-button w3-round w3-border w3-border-green"
-                onclick="addItem(this)"
+                onclick="addTask(this)"
               >
                 Добавить дело
               </button>
@@ -97,11 +101,6 @@ function addList() {
   listsContainer.appendChild(newList);
 
   titleInput.value = "";
-}
-
-function deleteItem(button) {
-  let taskItem = button.parentNode;
-  taskItem.parentNode.removeChild(taskItem);
 }
 
 function deleteList(button) {
